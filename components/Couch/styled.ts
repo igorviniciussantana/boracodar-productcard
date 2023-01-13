@@ -1,21 +1,20 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-height: 100%;
-width: 100%;
+height: 50vw;
+width: 100vh;
 `
 
 export const Header = styled.header`
-font-family: sans-serif
+font-family: sans-serif;
 `
 
 export const BodyModel = styled.div`
- 
   height: 100%;
   width: 100%;
   cursor: pointer;
   background-color: transparent;
-`;
+`
 
 export const Footer = styled.footer`
 
