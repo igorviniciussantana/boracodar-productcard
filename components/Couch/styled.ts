@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
 height: 50vw;
+margin-top: 5rem;
 width: 100vh;
 `
 

@@ -8,6 +8,7 @@ justify-content: center;
 `
 
 export const Code = styled.p`
+color: #271A45;
 
 `
 
@@ -16,5 +17,7 @@ color: #271A45;
 `
 
 export const Price = styled.p`
+color: #271A45;
+opacity: 0.67;
 
 `
