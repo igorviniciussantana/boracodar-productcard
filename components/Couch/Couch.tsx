@@ -83,17 +83,9 @@ export default function Couch(){
   
           frame = frame <= 100 ? frame + 1 : frame;
   
-          if (frame <= 100) {
-            const p = initialCameraPosition;
-            const rotSpeed = 0;
-  
-            camera.position.y = 5;
-            camera.position.x = p.x * Math.cos(rotSpeed) + p.z * Math.sin(rotSpeed);
-            camera.position.z = p.z * Math.cos(rotSpeed) - p.x * Math.sin(rotSpeed);
-            camera.lookAt(target);
-          } else {
+        
             controls.update();
-          }
+          
   
           renderer.render(scene, camera);
         };
