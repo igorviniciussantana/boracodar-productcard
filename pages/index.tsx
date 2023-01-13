@@ -10,7 +10,9 @@ const Couch = dynamic(() => import('../components/Couch/Couch'), {ssr: false, lo
 export default function Home() {
   return (
     <>
+    <main>
     <Couch />
+    </main>
    </>
   )
 }

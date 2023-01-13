@@ -11,10 +11,14 @@ export default function Couch(){
     const [loading, setLoading] = useState<boolean>(true);
     const [renderer, setRenderer] = useState<any>();
     const [_camera, setCamera] = useState<any>();
-    const [target] = useState(new THREE.Vector3(-3, -3, 0));
+    const [target] = useState(new THREE.Vector3(10, 10, -12));
+
     const [initialCameraPosition] = useState(
-      new THREE.Vector3(20 * Math.sin(0.2 * Math.PI), 10, 20 * Math.cos(0.2 * Math.PI)),
+      new THREE.Vector3(   100, 20, 700  ),
     );
+    // const [initialCameraPosition] = useState(
+    //   new THREE.Vector3(20 * Math.sin(0.2 * Math.PI), 10, 20 * Math.cos(0.2 * Math.PI)),
+    // );
     const [scene] = useState(new THREE.Scene());
     const [_controls, setControls] = useState<any>();
   
@@ -49,7 +53,8 @@ export default function Couch(){
         setRenderer(renderer);
   
         const scale = scH * 0.08 + 2;
-        const camera = new THREE.OrthographicCamera(-scale, scale, scale, -scale / 2, 0.01, 100000);
+        const camera = new THREE.PerspectiveCamera(100, scW/ scH, 1, 6000 );
+
         camera.position.copy(initialCameraPosition);
         camera.lookAt(target);
         setCamera(camera);
@@ -69,6 +74,7 @@ export default function Couch(){
             animate()
           setLoading(false);
         });
+        console.log(target)
   
         let req: any = null;
         let frame = 0;
