@@ -14,7 +14,7 @@ export default function Couch(){
     const [target] = useState(new THREE.Vector3(10, 10, -12));
 
     const [initialCameraPosition] = useState(
-      new THREE.Vector3(   100, 20, 700  ),
+      new THREE.Vector3(   50, 200, 700  ),
     );
     // const [initialCameraPosition] = useState(
     //   new THREE.Vector3(20 * Math.sin(0.2 * Math.PI), 10, 20 * Math.cos(0.2 * Math.PI)),
@@ -56,6 +56,7 @@ export default function Couch(){
         const camera = new THREE.PerspectiveCamera(100, scW/ scH, 1, 6000 );
 
         camera.position.copy(initialCameraPosition);
+        camera.rotation.set(0, 0, 75)
         camera.lookAt(target);
         setCamera(camera);
   
