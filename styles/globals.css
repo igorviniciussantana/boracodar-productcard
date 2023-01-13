@@ -13,4 +13,5 @@ main{
   align-items: center;
   overflow: hidden;
   flex-wrap: wrap;
+  padding: 0 0.5rem;
 }
