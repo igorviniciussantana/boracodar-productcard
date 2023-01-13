@@ -1,9 +1,10 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { loadGLTFModel } from "../../lib/model";
-import { BodyModel, Container, Button } from "./styled";
+import { CouchWrapper, Container, Button } from "./styled";
 import * as THREE from "three";
 import Image from "next/image";
+import CouchImage from "./CouchImage";
 
 export default function Couch() {
   const refBody = useRef<HTMLDivElement>(null);
@@ -94,8 +95,8 @@ export default function Couch() {
 
   return (
     <Container>
-      <Button onClick={changeView}>{view ? 'X' : 'button 360'}</Button>
-      {view ? <BodyModel ref={refBody}>{loading && <p>loading...</p>}</BodyModel> : <Image alt='' src='/couch.png' width={449} height={253}/>}
+      <Button onClick={changeView}>{view ? <Image alt='' src='/closeicon.svg' width={24} height={24}/> : <Image alt='' src='/360icon.svg' width={24} height={24}/>}</Button>
+      {view ? <CouchWrapper ref={refBody}>{loading && <p>loading...</p>}</CouchWrapper> : <CouchImage />}
       
     </Container>
   );

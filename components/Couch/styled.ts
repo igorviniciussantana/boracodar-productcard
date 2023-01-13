@@ -11,7 +11,7 @@ export const Header = styled.header`
 font-family: sans-serif;
 `
 
-export const BodyModel = styled.div`
+export const CouchWrapper = styled.div`
   height: 100%;
   width: 100%;
   background-color: transparent;
@@ -31,4 +31,17 @@ export const Button = styled.div`
 position: absolute;
 right:0;
 top: 0;
+`
+
+export const CouchImageWrapper = styled.div`
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 1rem;
+width: 100%;
+height: 100%;
+
+img{
+  width: 80%;
+}
 `
