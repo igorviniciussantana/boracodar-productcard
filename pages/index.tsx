@@ -11,6 +11,8 @@ const Couch = dynamic(() => import('../components/Couch/Couch'), {ssr: false, lo
 export default function Home() {
   return (
     <>
+    <h1 className={inter.className}>Igor Shop</h1>
+
     <main>
     <Couch />
     <Card />
