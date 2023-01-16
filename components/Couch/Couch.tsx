@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import { Spinner, Stack } from '@chakra-ui/react'
+import { Spinner, Stack } from "@chakra-ui/react";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { loadGLTFModel } from "../../lib/model";
 import { CouchWrapper, Container, Button, Loading } from "./styled";
@@ -8,8 +8,7 @@ import Image from "next/image";
 import CouchImage from "./CouchImage";
 import { Montserrat } from "@next/font/google";
 
-
-const montserrat = Montserrat({ subsets: ['latin'] })
+const montserrat = Montserrat({ subsets: ["latin"] });
 
 export default function Couch() {
   const refBody = useRef<HTMLDivElement>(null);
@@ -19,7 +18,6 @@ export default function Couch() {
   const [target] = useState(new THREE.Vector3(10, 10, -12));
   const [view, setView] = useState(false);
 
-
   const [initialCameraPosition] = useState(new THREE.Vector3(50, 200, 700));
   // const [initialCameraPosition] = useState(
   //   new THREE.Vector3(20 * Math.sin(0.2 * Math.PI), 10, 20 * Math.cos(0.2 * Math.PI)),
@@ -27,10 +25,9 @@ export default function Couch() {
   const [scene, setScene] = useState(new THREE.Scene());
   const [_controls, setControls] = useState<any>();
 
- 
   useEffect(() => {
     const { current: container } = refBody;
-    console.log('rodou useEffect')
+    console.log("rodou useEffect");
     if (container && !renderer) {
       const scW = container.clientWidth;
       const scH = container.clientHeight;
@@ -51,7 +48,7 @@ export default function Couch() {
       camera.position.copy(initialCameraPosition);
       camera.rotation.set(0, 0, 75);
       camera.lookAt(target);
-      console.log('setou')
+      console.log("setou");
       setCamera(camera);
 
       const ambientLight = new THREE.AmbientLight(0xcccccc, 1);
@@ -90,19 +87,34 @@ export default function Couch() {
     }
   }, [view, renderer]);
 
-  function changeView(){
-    setView(!view)
-    setRenderer(null)
-    setScene(new THREE.Scene())
-    setLoading(true)
+  function changeView() {
+    setView(!view);
+    setRenderer(null);
+    setScene(new THREE.Scene());
+    setLoading(true);
   }
-
 
   return (
     <Container>
-      <Button onClick={changeView}>{view ? <Image alt='' src='/closeicon.svg' width={24} height={24}/> : <Image alt='' src='/360icon.svg' width={24} height={24}/>}</Button>
-      {view ? <CouchWrapper ref={refBody}>{loading && <Loading><CouchImage /><p className={montserrat.className}>Loading...</p></Loading>}</CouchWrapper> : <CouchImage />}
-      
+      <Button onClick={changeView}>
+        {view ? (
+          <Image alt="" src="/closeicon.svg" width={24} height={24} />
+        ) : (
+          <Image alt="" src="/360icon.svg" width={24} height={24} />
+        )}
+      </Button>
+      {view ? (
+        <CouchWrapper ref={refBody}>
+          {loading && (
+            <Loading>
+              <CouchImage />
+              <p className={montserrat.className}>Loading...</p>
+            </Loading>
+          )}
+        </CouchWrapper>
+      ) : (
+        <CouchImage />
+      )}
     </Container>
   );
 }
