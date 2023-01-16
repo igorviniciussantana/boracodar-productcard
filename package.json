@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@chakra-ui/react": "^2.4.8",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
     "@next/font": "13.1.1",
     "@react-three/fiber": "^8.10.0",
     "@types/node": "18.11.18",
@@ -25,7 +28,7 @@
   "devDependencies": {
     "@types/styled-components": "^5.1.26",
     "@types/three": "^0.148.0",
-    "framer-motion": "^8.4.2",
+    "framer-motion": "^8.4.3",
     "styled-components": "^5.3.6",
     "three": "^0.148.0"
   }
