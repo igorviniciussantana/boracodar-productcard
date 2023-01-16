@@ -1,10 +1,15 @@
 import { useCallback, useEffect, useRef, useState } from "react";
+import { Spinner, Stack } from '@chakra-ui/react'
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { loadGLTFModel } from "../../lib/model";
 import { CouchWrapper, Container, Button, Loading } from "./styled";
 import * as THREE from "three";
 import Image from "next/image";
 import CouchImage from "./CouchImage";
+import { Montserrat } from "@next/font/google";
+
+
+const montserrat = Montserrat({ subsets: ['latin'] })
 
 export default function Couch() {
   const refBody = useRef<HTMLDivElement>(null);
@@ -96,7 +101,7 @@ export default function Couch() {
   return (
     <Container>
       <Button onClick={changeView}>{view ? <Image alt='' src='/closeicon.svg' width={24} height={24}/> : <Image alt='' src='/360icon.svg' width={24} height={24}/>}</Button>
-      {view ? <CouchWrapper ref={refBody}>{loading && <Loading><CouchImage /><p>Loading...</p></Loading>}</CouchWrapper> : <CouchImage />}
+      {view ? <CouchWrapper ref={refBody}>{loading && <Loading><CouchImage /><p className={montserrat.className}>Loading...</p></Loading>}</CouchWrapper> : <CouchImage />}
       
     </Container>
   );

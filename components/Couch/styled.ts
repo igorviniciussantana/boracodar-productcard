@@ -56,11 +56,13 @@ img{
 export const Loading = styled.div`
 display: flex; 
 align-items: center;
-width: 100%;
-height: 100%;
+justify-content: center;
 position: relative;
 
-img{
+width: 100%;
+height: 100%; 
+
+ img{
 filter: blur(2px);
 
 }
