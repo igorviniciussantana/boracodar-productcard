@@ -1,4 +1,4 @@
-import { CardWrapper, Code, Price, Title } from "./styled";
+import { Button, CardWrapper, Code, Price, Title } from "./styled";
 
 import { Crimson_Pro, Lato } from "@next/font/google";
 
@@ -13,6 +13,7 @@ export default function Card() {
       <Title className={crimsom_pro.className}>Sofá Margot II - Rosé</Title>
 
       <Price className={lato.className}>R$ 4.000</Price>
+      <Button>Adicionar à cesta</Button>
     </CardWrapper>
   );
 }
