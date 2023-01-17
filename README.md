@@ -1,5 +1,4 @@
-![bannerMusicPlayer](https://user-images.githubusercontent.com/86114583/211811007-5c4861f9-b558-4e71-aaa9-43fb2bcc618f.png)
-
+![bannerProductCard](https://user-images.githubusercontent.com/86114583/212896907-d370ea27-a3a4-425a-8bc6-46e55fd2ff5f.png)
 
 <h1 align='center'>Product Card - #boraCodar</h1>
 
@@ -15,6 +14,7 @@
 ## 🛠 - Tecnologias
 
 ![NextJS](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![ThreeJS](https://img.shields.io/badge/ThreeJs-black?style=for-the-badge&logo=three.js&logoColor=white)
 ![Styled-Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
 ![SASS](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
@@ -24,14 +24,14 @@
 
 Acesse o protótipo disponibilizado pela Rocketseat clicando no botão abaixo:
 
-<a href="https://www.figma.com/file/aUPz0jeV4vtvVcyIASj0RA/%23boraCodar---Desafio-1?node-id=1128%3A22&t=1zXSyQs8rmFfMeG4-1
+<a href="https://www.figma.com/file/3Rddpac5gnGe4vFpDbvTi0/%23boraCodar---Desafio-2?node-id=0%3A1&t=Fh4zkaodgzkFeWTI-1
 ">![Figma](https://img.shields.io/badge/Acessar%20Protótipo-2A2141?style=for-the-badge&logo=figma&logoColor=white)</a>
 
 <h3>🔗 - Deploy</h3>
 
 Acesse o projeto em produção clicando no botão abaixo:
 
-<a href="https://boracodar-musicplayer.vercel.app" target='_blank'>![Vercel](https://img.shields.io/badge/Deploy-000000?style=for-the-badge&logo=vercel&logoColor=white)</a>
+<a href="https://boracodar-productcard.vercel.app" target='_blank'>![Vercel](https://img.shields.io/badge/Deploy-000000?style=for-the-badge&logo=vercel&logoColor=white)</a>
 
 <h3> ✔ - Requisitos</h3>
 
